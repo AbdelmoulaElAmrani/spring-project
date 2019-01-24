@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head" />
+
+<body>
+<nav th:replace="partials :: navbar" />
+
+<div th:with="condition=${num == randNum}" th:remove="tag">
+    <h2 th:if="${condition}">Congrat! you got it</h2>
+    <h2 th:unless="${condition}" class="xxx">Oh no try another one</h2>
+</div>
+<h1>Your number is  <span th:text="${num}"></span>!</h1>
+<h1>The lucky number is  <span th:text="${randNum}"></span>!</h1>
+
+<footer th:replace="partials :: footer" />
+
+</body>
+</html>

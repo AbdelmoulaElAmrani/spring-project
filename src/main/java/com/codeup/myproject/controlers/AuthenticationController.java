@@ -2,13 +2,11 @@ package com.codeup.myproject.controlers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class HomeController {
-    @GetMapping("/")
-
-    public String hello (){
-        return  "home";
+public class AuthenticationController {
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "posts/login";
     }
 }
